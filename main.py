@@ -3,7 +3,7 @@ from pyqtfive.utils import clear_screen, buffer
 #TODO (ARGUELLES): Import a class from a module inside a package
 from pyqtfive.caya import Caya
 #TODO (CONDINO): Import a class from a module inside a package
-#TODO (CORDOVA): Import a class from a module inside a package
+from pyqtfive.cordova import Cordova
 from pyqtfive.gutierrez import Gutierrez
 
 EXIT_OPTION = 0
@@ -13,7 +13,7 @@ UNSET_OPTION = -1
 #TODO (ARGUELLES): Initialize your imported class
 caya = Caya()
 #TODO (CONDINO): Initialize your imported class
-#TODO (CORDOVA): Initialize your imported class
+cordova = Cordova()
 gutierrez = Gutierrez()
 
 def menu():
@@ -48,8 +48,7 @@ def process_choice(choice):
             #TODO (CONDINO): Call the appropriate function here
             pass
         case 4:
-            #TODO (CORDOVA): Call the appropriate function here
-            pass
+            cordova.menu()
         case 5:
             gutierrez.menu()
         case 0:

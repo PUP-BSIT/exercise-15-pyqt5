@@ -45,6 +45,7 @@ class Arguelles:
             
     def display_get_choice(self):
         clear_screen()
+        print("--- Welcome to Arguelles Menu ---")
         print("1. Greet")
         print("2. Show Age")
         print("3. Favorite Movie")

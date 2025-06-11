@@ -50,9 +50,9 @@ class Arguelles:
         print("3. Favorite Movie")
         print("4. Favorite Game")
         print("5. Birthday")
-        print("0. Exit")
+        print("0. Back to Main Menu")
                
-        return int(input("Enter your choice: "))
+        return int(input("\nEnter your choice: "))
     
     def process_choice(self, choice):
         clear_screen()

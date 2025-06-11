@@ -1,4 +1,5 @@
 from pyqtfive.utils import buffer, clear_screen
+from pyqtfive.utils import handle_value_error, handle_unexpected_error
 
 class Condino:
     BACK_TO_MENU_OPTION = 0
@@ -34,11 +35,16 @@ class Condino:
         choice = self.UNSET_OPTION
 
         while choice != self.BACK_TO_MENU_OPTION:
-            choice = self.display_get_choice()
-            self.process_choice(choice)
-            clear_screen()
+            try:
+                choice = self.display_get_choice()
+                self.process_choice(choice)
+            except ValueError:
+                handle_value_error()
+            except Exception as e:
+                handle_unexpected_error(e)
 
     def display_get_choice(self):
+        clear_screen()
         print("\n--- Condino's Menu ---")
         print("1. Greet")
         print("2. Show Age")

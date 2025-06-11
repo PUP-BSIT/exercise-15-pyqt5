@@ -22,7 +22,7 @@ class Arguelles:
         buffer()
         
     def favorite_game(self):
-        print(f"My favorite game is League of Legends.")
+        print("My favorite game is League of Legends.")
         buffer()
         
     def show_birthday(self):

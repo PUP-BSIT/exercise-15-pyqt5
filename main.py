@@ -10,7 +10,7 @@ EXIT_OPTION = 0
 UNSET_OPTION = -1
 
 # Initialize instances of various classes
-arguelles = Arguelles()  # Initialize Norlan Arguelles' class
+arguelles = Arguelles()
 caya = Caya()
 #TODO (CONDINO): Initialize your imported class
 cordova = Cordova()

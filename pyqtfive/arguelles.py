@@ -18,11 +18,11 @@ class Arguelles:
         print(f"I am {self.age} years old.")
         buffer()
     
-    def favorite_movie(self):
+    def show_favorite_movie(self):
         print(f"My favorite movie is {self.movie}.")
         buffer()
         
-    def favorite_game(self):
+    def show_favorite_game(self):
         print("My favorite game is League of Legends.")
         buffer()
         
@@ -63,9 +63,9 @@ class Arguelles:
             case 2:
                 self.show_age()
             case 3:
-                self.favorite_movie()
+                self.show_favorite_movie()
             case 4:
-                self.favorite_game()
+                self.show_favorite_game()
             case 5:
                 self.show_birthday()
             case 0:

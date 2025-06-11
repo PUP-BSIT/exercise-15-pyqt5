@@ -1,4 +1,5 @@
 from pyqtfive.utils import clear_screen, buffer
+from pyqtfive.utils import handle_value_error, handle_unexpected_error
 
 class Cordova:
     BACK_TO_MENU_OPTION = 0
@@ -35,8 +36,14 @@ class Cordova:
         choice = self.UNSET_OPTION
 
         while choice != self.BACK_TO_MENU_OPTION:
-            choice = self.display_choice()
-            self.process_choice(choice)
+            try:
+                choice = self.display_choice()
+                self.process_choice(choice)
+            except ValueError:
+                handle_value_error()
+            except Exception as e:
+                handle_unexpected_error(e)
+                
             clear_screen()
 
     def display_choice(self):

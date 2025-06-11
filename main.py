@@ -1,5 +1,6 @@
 #Import modules from pyqtfive package
 from pyqtfive.utils import clear_screen, buffer
+from pyqtfive.utils import handle_value_error, handle_unexpected_error
 from pyqtfive.arguelles import Arguelles
 from pyqtfive.caya import Caya
 from pyqtfive.condino import Condino
@@ -21,8 +22,14 @@ def menu():
     choice = UNSET_OPTION
 
     while choice != EXIT_OPTION:
-        choice = display_choice()
-        process_choice(choice)
+        try:
+            choice = display_choice()
+            process_choice(choice)
+        except ValueError:
+            handle_value_error()
+        except Exception as e:
+            handle_unexpected_error(e)
+            
         clear_screen()
 
 def display_choice():

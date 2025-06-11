@@ -1,4 +1,5 @@
 from pyqtfive.utils import clear_screen, buffer
+from pyqtfive.utils import handle_value_error, handle_unexpected_error
 
 class Gutierrez:
     BACK_TO_MENU_OPTION = 0
@@ -34,11 +35,16 @@ class Gutierrez:
         choice = self.UNSET_OPTION
 
         while choice != self.BACK_TO_MENU_OPTION:
-            choice = self.display_choice()
-            self.process_choice(choice)
-            clear_screen()
+            try:
+                choice = self.display_choice()
+                self.process_choice(choice)
+            except ValueError:
+                handle_value_error()
+            except Exception as e:
+                handle_unexpected_error(e)
 
     def display_choice(self):
+        clear_screen()
         print("\n--- Hello, Welcome to Gutierrez Menu ---")
         print("1. Greet")
         print("2. Show Age")

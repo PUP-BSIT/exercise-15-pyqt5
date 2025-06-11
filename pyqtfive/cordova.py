@@ -44,7 +44,6 @@ class Cordova:
             except Exception as e:
                 handle_unexpected_error(e)
                 
-
     def display_choice(self):
         clear_screen()
         print("--- Cordova's Menu ---")

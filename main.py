@@ -1,7 +1,7 @@
 #Import modules from pyqtfive package
 from pyqtfive.utils import clear_screen, buffer
 #TODO (ARGUELLES): Import a class from a module inside a package
-#TODO (CAYA): Import a class from a module inside a package
+from pyqtfive.caya import Caya
 #TODO (CONDINO): Import a class from a module inside a package
 #TODO (CORDOVA): Import a class from a module inside a package
 from pyqtfive.gutierrez import Gutierrez
@@ -11,7 +11,7 @@ UNSET_OPTION = -1
 
 # Initialize instances of various classes
 #TODO (ARGUELLES): Initialize your imported class
-#TODO (CAYA): Initialize your imported class
+caya = Caya()
 #TODO (CONDINO): Initialize your imported class
 #TODO (CORDOVA): Initialize your imported class
 gutierrez = Gutierrez()
@@ -43,8 +43,7 @@ def process_choice(choice):
             #TODO (ARGUELLES): Call the appropriate function here
             pass
         case 2:
-            #TODO (CAYA): Call the appropriate function here
-            pass
+            caya.menu()
         case 3:
             #TODO (CONDINO): Call the appropriate function here
             pass

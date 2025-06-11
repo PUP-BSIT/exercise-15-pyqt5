@@ -26,7 +26,7 @@ class Condino:
         print("My hobby is playing online games.")
         buffer()
 
-    def favorite_language(self):
+    def show_favorite_language(self):
         print("Python is my favorite programming language.")
         buffer()
 
@@ -36,14 +36,14 @@ class Condino:
 
         while choice != self.BACK_TO_MENU_OPTION:
             try:
-                choice = self.display_get_choice()
+                choice = self.display_choice()
                 self.process_choice(choice)
             except ValueError:
                 handle_value_error()
             except Exception as e:
                 handle_unexpected_error(e)
 
-    def display_get_choice(self):
+    def display_choice(self):
         clear_screen()
         print("\n--- Condino's Menu ---")
         print("1. Greet")
@@ -67,7 +67,7 @@ class Condino:
             case 4:
                 self.show_hobby()
             case 5:
-                self.favorite_language()
+                self.show_favorite_language()
             case 0:
                 pass  
             case _:

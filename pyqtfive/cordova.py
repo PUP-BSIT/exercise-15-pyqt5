@@ -1,4 +1,4 @@
-from utils import clear_screen, buffer
+from pyqtfive.utils import clear_screen, buffer
 
 class Cordova:
     BACK_TO_MENU_OPTION = 0

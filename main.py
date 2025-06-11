@@ -1,6 +1,6 @@
 #Import modules from pyqtfive package
 from pyqtfive.utils import clear_screen, buffer
-#TODO (ARGUELLES): Import a class from a module inside a package
+from pyqtfive.arguelles import Arguelles
 from pyqtfive.caya import Caya
 #TODO (CONDINO): Import a class from a module inside a package
 from pyqtfive.cordova import Cordova
@@ -10,7 +10,7 @@ EXIT_OPTION = 0
 UNSET_OPTION = -1
 
 # Initialize instances of various classes
-#TODO (ARGUELLES): Initialize your imported class
+arguelles = Arguelles()
 caya = Caya()
 #TODO (CONDINO): Initialize your imported class
 cordova = Cordova()
@@ -40,8 +40,7 @@ def process_choice(choice):
     clear_screen()   
     match choice:
         case 1:
-            #TODO (ARGUELLES): Call the appropriate function here
-            pass
+            arguelles.menu()
         case 2:
             caya.menu()
         case 3:

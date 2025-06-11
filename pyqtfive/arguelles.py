@@ -1,7 +1,7 @@
 from pyqtfive.utils import buffer, clear_screen
 
 class Arguelles:
-    EXIT_OPTION = 0
+    BACK_TO_MENU_OPTION = 0
     UNSET_OPTION = -1
     
     def __init__(self):
@@ -33,7 +33,7 @@ class Arguelles:
         clear_screen()
         choice = self.UNSET_OPTION
         
-        while choice != self.EXIT_OPTION:
+        while choice != self.BACK_TO_MENU_OPTION:
             choice = self.display_get_choice()
             self.process_choice(choice)
             

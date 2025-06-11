@@ -30,9 +30,8 @@ def menu():
         except Exception as e:
             handle_unexpected_error(e)
             
-        clear_screen()
-
 def display_choice():
+    clear_screen()
     print("=== Team Member Menu ===")
     print("1 - Norlan Arguelles")
     print("2 - Karl Caya")
